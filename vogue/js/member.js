@@ -464,7 +464,26 @@ $('#btnj').click(e=>{
 
     // 4. 검사결과 에 따라 메시지보이기
     if(pass){
-        alert('회원가입을 축하한다 호구새끼야!!');
+        // 오리지널 포스트 방식으로 전송함!
+        $('.logF').submit();
+        // 현재 페이지 form정보가 모두 inc/ins.php로 
+        // 이동하여 데이터를 처리함 - 동기화 방식
+
+        // -> 현재 페이지를 가만히 두고 처리페이지로
+        // 비동기적인 처리를 하는것이 바로 Ajax !!
+
+        /* 
+            [ Ajax를 이용한 POST 방식으로 DB에 데이터 입력하기 ]
+
+            AJAX = Asyncronous Javascript and XML
+        
+        
+        */
+
+
+
+
+        // alert('회원가입을 축하한다 호구새끼야!!');
         // 원래는 POST 방식으로 DB에 회원가입 정보를
         // 전송하여 입력후 DB처리 완료시 성공메시지나
         // 로그인 페이지로 넘겨준다!
@@ -472,10 +491,10 @@ $('#btnj').click(e=>{
         // 로그인 페이지로 리디렉션!
         // location.href = 'login.php';
         // 입력데이터 히스토리 지우는 replace()로 이동한다
-        location.replace('login.php');
+        // location.replace('login.php');
     }  /// if /////// 통과시
     else{
-        alert('입력을 수정하세요 시발^^');
+        alert('입력을 수정하세요 ^^');
     } //// else 불통과시 //////////////
 
 }); //// click //////////////
